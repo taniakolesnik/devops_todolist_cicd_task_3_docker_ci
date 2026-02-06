@@ -62,5 +62,5 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: python-artifacts
-          patu: .
+          path: .
 
