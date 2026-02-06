@@ -55,5 +55,12 @@ jobs:
         with:
           name: python-artifacts
           path: .
-
+  docker-ci:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download python artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: python-artifacts
+          patu: .
 
