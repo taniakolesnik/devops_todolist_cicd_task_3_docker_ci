@@ -59,10 +59,11 @@ jobs:
           path: .
   docker-ci:
     needs: ['python-ci']
+    if: github.ref_name == 'main'
     runs-on: ubuntu-latest
     steps:
       - name: Download python artifacts
-        if: github.ref_name == 'main'
+
         uses: actions/download-artifact@v4
         with:
           name: python-artifacts
